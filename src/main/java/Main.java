@@ -1,0 +1,18 @@
+import org.example.KeelungSightsCrawler;
+import org.example.Sight;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        KeelungSightsCrawler crawler = new KeelungSightsCrawler();
+        Sight[] sights = crawler.getItems("中山");
+        for (Sight s: sights) {
+            System.out.println("SightName:"+s.getSightName()+"\nZone: "+s.getZone()+"\nCategory: "+s.getCategory()
+                    +"\nPhotoURL: "+s.getPhotoURL()+"\nDescription: " +s.getDescription()
+            );
+        }
+    }
+}
